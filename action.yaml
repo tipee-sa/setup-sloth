@@ -6,4 +6,4 @@ runs:
     - shell: bash
       run: |
         curl https://storage.googleapis.com/sloth-builds/latest/sloth-linux-amd64 | sudo tee /usr/local/bin/sloth >/dev/null
-        sudo chmod +x /usr/bin/sloth
+        sudo chmod +x /usr/local/bin/sloth
