@@ -1,0 +1,10 @@
+name: "Setup Sloth"
+description: "Setup Sloth for GitHub Actions"
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      run: |
+        echo $PATH
+        curl https://storage.googleapis.com/sloth-builds/latest/sloth-linux-amd64 > /usr/bin/sloth
+        chmod +x /usr/bin/sloth
