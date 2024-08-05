@@ -5,5 +5,5 @@ runs:
   steps:
     - shell: bash
       run: |
-        curl https://storage.googleapis.com/sloth-builds/latest/sloth-linux-amd64 | sudo tee /usr/local/bin/sloth >/dev/null
+        curl https://static.tipee.dev/releases/sloth/latest/sloth-linux-amd64 | sudo tee /usr/local/bin/sloth >/dev/null
         sudo chmod +x /usr/local/bin/sloth
