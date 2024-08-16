@@ -1,0 +1,16 @@
+name: Test
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+    steps:
+      - uses: tipee-sa/setup-sloth@master
+      - run: |
+          env | grep SLOTH | base64
+      - run: |
+          sloth iam status
