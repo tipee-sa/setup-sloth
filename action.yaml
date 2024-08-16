@@ -12,7 +12,7 @@ runs:
         curl "https://static.tipee.dev/releases/sloth/$SLOTH_CHANNEL/sloth-linux-amd64" | sudo tee /usr/local/bin/sloth >/dev/null
         sudo chmod +x /usr/local/bin/sloth
 
-        token="$(curl -s -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=//sloth.tipee.dev")"
+        token="$(curl -s -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=//sloth.tipee.dev" | jq -r '.value')"
         if [ ! -z "$token" ]; then
           echo "SLOTH_IDENTITY=github::$token" >> "$GITHUB_ENV"
         fi
