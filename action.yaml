@@ -9,7 +9,7 @@ runs:
   steps:
     - shell: bash
       run: |
-        curl "https://static.tipee.dev/releases/sloth/$SLOTH_CHANNEL/sloth-linux-amd64" | sudo tee /usr/local/bin/sloth >/dev/null
+        curl "https://static.tipee.cloud/releases/sloth/$SLOTH_CHANNEL/sloth-linux-amd64" | sudo tee /usr/local/bin/sloth >/dev/null
         sudo chmod +x /usr/local/bin/sloth
 
         # Setup OIDC identity if available
